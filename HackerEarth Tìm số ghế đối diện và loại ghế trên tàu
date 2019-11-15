@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,t,b=1;
+    cout<<"Nhập số lần cần tính : ";
+    cin>>t;
+    if (t<1||t>100000)cout<<"Error";
+    else {
+        while (b<=t) {
+            cout<<"Nhập số ghế : ";
+            cin>>a;
+            if (a<1||a>108)cout<<"Error";
+            else {
+                if (a%12==1)cout<<(a+11)<<" "<<"WS"<<endl;
+                if (a%12==2) cout<<(a+9)<<" "<<"MS"<<endl;
+                if (a%12==3) cout<<(a+7)<<" "<<"AS"<<endl;
+                if (a%12==4) cout<<(a+5)<<" "<<"AS"<<endl;
+                if (a%12==5) cout<<(a+3)<<" "<<"MS"<<endl;
+                if (a%12==6) cout<<(a+1)<<" "<<"WS"<<endl;
+                if (a%12==7) cout<<(a-1)<<" "<<"WS"<<endl;
+                if (a%12==8) cout<<(a-3)<<" "<<"MS"<<endl;
+                if (a%12==9) cout<<(a-5)<<" "<<"AS"<<endl;
+                if (a%12==10)cout<<(a-7)<<" "<<"AS"<<endl;
+                if (a%12==11)cout<<(a-9)<<" "<<"MS"<<endl;
+                if (a%12==0)cout<<(a-11)<<" "<<"WS"<<endl;
+            }
+            b++;
+        }
+    }
+    return 0;
+}
